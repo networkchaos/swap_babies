@@ -10,7 +10,9 @@
 - 📱 **Pay with M-Pesa** - No complex setup needed
 - ⚡ **Instant delivery** - Tokens sent directly to your wallet
 
-## 🚀 **Quick Start (3 Steps)**
+## 🚀 **Quick Start (2 Steps)**
+
+**Note:** This software connects to pre-deployed smart contracts. You cannot deploy your own contracts - you only use the existing system.
 
 ### **Step 1: Download & Install**
 
@@ -36,19 +38,9 @@ cd swap_babies
 npm install
 ```
 
-### **Step 2: Set Up M-Pesa (One-time setup)**
+### **Step 2: Start Buying Crypto!**
 
-1. **Get M-Pesa API credentials** from [Safaricom Developer Portal](https://developer.safaricom.co.ke/)
-2. **Edit the `.env` file** with your credentials:
-   ```bash
-   MPESA_CONSUMER_KEY=your_consumer_key
-   MPESA_CONSUMER_SECRET=your_consumer_secret
-   MPESA_SHORTCODE=your_shortcode
-   MPESA_PASSKEY=your_passkey
-   MPESA_CALLBACK_BASE=https://your-domain.com
-   ```
-
-### **Step 3: Start Buying Crypto!**
+**No M-Pesa setup needed!** The system uses the platform's M-Pesa integration. Just start using it:
 
 ```bash
 npm run cli

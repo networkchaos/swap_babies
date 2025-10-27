@@ -8,7 +8,7 @@ Buy ETH, USDC, and other tokens using M-Pesa with just 150 KES minimum. No compl
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 
-## ⚡ **Quick Start**
+## ⚡ **Quick Start (For Users)**
 
 ```bash
 # Download and install (Windows)
@@ -22,6 +22,12 @@ chmod +x install.sh && ./install.sh
 # Start buying crypto!
 npm run cli
 ```
+
+**Note:** This connects to pre-deployed smart contracts. You only use the features - you cannot deploy your own contracts.
+
+## 🔧 **For Platform Owners (Deployment)**
+
+If you want to deploy your own Swap Babies CLI system, see [DEPLOYER_GUIDE.md](DEPLOYER_GUIDE.md) for complete deployment instructions.
 
 ## ✨ **Key Features**
 
