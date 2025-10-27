@@ -1,0 +1,53 @@
+{
+  "name": "swap_babies_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/server.js",
+    "dev": "ts-node src/server.ts",
+    "cli": "ts-node src/simple-cli.ts push",
+    "cli:quick": "ts-node src/simple-cli.ts push-quick",
+    "server": "ts-node src/server.ts",
+    "hardhat": "hardhat",
+    "deploy:celo": "npx hardhat run scripts/deploy.ts --network celo",
+    "deploy:eth": "npx hardhat run scripts/deploy.ts --network ethereum",
+    "deploy:base": "npx hardhat run scripts/deploy.ts --network base",
+    "deploy:testnet:celo": "npx hardhat run scripts/deploy.ts --network alfajores",
+    "deploy:testnet:eth": "npx hardhat run scripts/deploy.ts --network sepolia",
+    "deploy:testnet:base": "npx hardhat run scripts/deploy.ts --network baseSepolia"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.2",
+    "@nomicfoundation/hardhat-ignition": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
+    "@types/chai": "^4.3.20",
+    "@types/chai-as-promised": "^8.0.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.18.9",
+    "@types/yargs": "^17.0.33",
+    "chai": "^5.3.3",
+    "ethers": "^6.15.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.0.7",
+    "mocha": "^11.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.0"
+  }
+}
