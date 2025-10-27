@@ -1,6 +1,27 @@
-# 🚀 Swap Babies CLI - M-Pesa to Crypto Bridge
+# 🚀 Swap Babies CLI - Buy Crypto with M-Pesa!
 
-A complete solution that allows users to buy cryptocurrency tokens using M-Pesa mobile payments. Users can purchase ETH, USDC, or any ERC-20 token on Celo, Ethereum, or Base networks with just 150 KES minimum.
+**The easiest way to convert your mobile money to cryptocurrency!** 
+
+Buy ETH, USDC, and other tokens using M-Pesa with just 150 KES minimum. No complex setup, no KYC, just simple mobile payments.
+
+[![GitHub stars](https://img.shields.io/github/stars/networkchaos/swap_babies?style=social)](https://github.com/networkchaos/swap_babies)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+
+## ⚡ **Quick Start**
+
+```bash
+# Download and install (Windows)
+curl -o install.bat https://raw.githubusercontent.com/networkchaos/swap_babies/main/install.bat
+install.bat
+
+# Download and install (Mac/Linux)
+curl -o install.sh https://raw.githubusercontent.com/networkchaos/swap_babies/main/install.sh
+chmod +x install.sh && ./install.sh
+
+# Start buying crypto!
+npm run cli
+```
 
 ## ✨ **Key Features**
 

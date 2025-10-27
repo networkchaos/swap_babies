@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build
+      run: npm run build
+    
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: |
+          ## 🚀 Swap Babies CLI Release
+          
+          ### What's New
+          - M-Pesa to crypto bridge
+          - Support for ETH, USDC, and custom tokens
+          - Multi-chain support (Celo, Ethereum, Base)
+          - 150 KES minimum amount
+          - Interactive CLI interface
+          
+          ### Installation
+          ```bash
+          # Windows
+          curl -o install.bat https://raw.githubusercontent.com/networkchaos/swap_babies/main/install.bat
+          install.bat
+          
+          # Mac/Linux
+          curl -o install.sh https://raw.githubusercontent.com/networkchaos/swap_babies/main/install.sh
+          chmod +x install.sh && ./install.sh
+          ```
+          
+          ### Usage
+          ```bash
+          npm run cli
+          ```
+        draft: false
+        prerelease: false

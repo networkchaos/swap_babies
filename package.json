@@ -1,8 +1,11 @@
 {
-  "name": "swap_babies_cli",
+  "name": "swap-babies-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "M-Pesa to Crypto Bridge - Buy ETH, USDC, and tokens with mobile money",
+  "main": "src/cli.ts",
+  "bin": {
+    "swap-babies": "src/cli.ts"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node build/server.js",
@@ -18,9 +21,29 @@
     "deploy:testnet:eth": "npx hardhat run scripts/deploy.ts --network sepolia",
     "deploy:testnet:base": "npx hardhat run scripts/deploy.ts --network baseSepolia"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mpesa",
+    "crypto",
+    "ethereum",
+    "celo",
+    "base",
+    "defi",
+    "mobile-money",
+    "kenya",
+    "tokens",
+    "swap",
+    "cli"
+  ],
+  "author": "NetworkChaos",
+  "license": "MIT",
+  "homepage": "https://github.com/networkchaos/swap_babies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/networkchaos/swap_babies.git"
+  },
+  "bugs": {
+    "url": "https://github.com/networkchaos/swap_babies/issues"
+  },
   "type": "commonjs",
   "dependencies": {
     "@openzeppelin/contracts": "^5.4.0",
