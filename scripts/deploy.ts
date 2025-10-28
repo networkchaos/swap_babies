@@ -1,9 +1,9 @@
 import hre from "hardhat";
-const { ethers } = hre;
 
 async function main() {
-  const network = await ethers.provider.getNetwork();
-  console.log("Deploying to network:", network.name, "Chain ID:", network.chainId);
+  const { ethers, network } = hre as typeof hre & { ethers: typeof import("hardhat")["ethers"] };
+  const chainId = (network.config as any)?.chainId;
+  console.log("Deploying to network:", network.name, "Chain ID:", chainId ?? "unknown");
 
   // Get addresses based on network
   const router = getRouterAddress(network.chainId);
@@ -24,7 +24,7 @@ async function main() {
   await deployed.deployed();
   
   console.log("✅ SwapAndSend deployed to:", deployed.address);
-  console.log("🔗 View on explorer:", getExplorerUrl(network.chainId, deployed.address));
+  console.log("🔗 View on explorer:", getExplorerUrl(chainId ?? 0, deployed.address));
 }
 
 function getRouterAddress(chainId: number): string {
