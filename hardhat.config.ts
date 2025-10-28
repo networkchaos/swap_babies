@@ -38,32 +38,38 @@ const config: HardhatUserConfig = {
     },
     // Testnets
     alfajores: {
+      type: "http",
       url: process.env.CELO_RPC,
       chainId: 44787,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     },
     sepolia: {
+      type: "http",
       url: process.env.ETH_RPC,
       chainId: 11155111,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     },
     baseSepolia: {
+      type: "http",
       url: process.env.BASE_RPC,
       chainId: 84532,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     },
     // Mainnets
     celo: {
+      type: "http",
       url: process.env.CELO_MAINNET_RPC,
       chainId: 42220,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     },
     ethereum: {
+      type: "http",
       url: process.env.ETH_MAINNET_RPC,
       chainId: 1,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     },
     base: {
+      type: "http",
       url: process.env.BASE_MAINNET_RPC,
       chainId: 8453,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
